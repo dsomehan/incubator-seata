@@ -177,6 +177,11 @@
             <artifactId>druid</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.shentong.jdbc</groupId>
+            <artifactId>oscarJDBC8</artifactId>
+            <version>4.1.105</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
         </dependency>

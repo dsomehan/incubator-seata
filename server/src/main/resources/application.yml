@@ -46,7 +46,23 @@ seata:
     type: file
   store:
     # support: file 、 db 、 redis 、 raft
-    mode: file
+    mode: db
+    db:
+      datasource: druid
+      db-type: oscar
+      driver-class-name: com.oscar.Driver
+      url: jdbc:oscar://192.168.1.74:2003/OSRDB
+      user: seata
+      password: seata
+      min-conn: 5
+      max-conn: 100
+      global-table: global_table
+      branch-table: branch_table
+      lock-table: lock_table
+      distributed-lock-table: distributed_lock
+      query-limit: 100
+      max-wait: 5000
+      vgroup-table: vgroup_table
   #  server:
   #    service-port: 8091 #If not configured, the default is '${server.port} + 1000'
   security:
